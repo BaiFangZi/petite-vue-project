@@ -181,7 +181,7 @@ new HtmlWebpackPlugin({
 
 每个页面都需要引入一次`petite-vue`,还有一些公共样式，这些都需要把他们提取出来
 
-~~~json
+~~~js
 optimization: {
     splitChunks: {
         cacheGroups: {
@@ -199,7 +199,7 @@ optimization: {
 
 为了避免每次更改页代码都需要手动去刷新浏览器页面
 
-~~~json
+~~~js
 devServer: {
     // hot: true,
     disableHostCheck: true,
@@ -220,8 +220,8 @@ webpack5 不兼容`process.env`，手动去定义全局变量
 
 ~~~js
 new webpack.DefinePlugin({
-    'process.env.NODE_ENV': JSON.stringify('development'),
-    'process.env.BASE_URL': JSON.stringify(EnvConfig.DEV_URL),
+    'process.env.NODE_ENV': js.stringify('development'),
+    'process.env.BASE_URL': js.stringify(EnvConfig.DEV_URL),
 }),
 ~~~
 
@@ -229,7 +229,7 @@ new webpack.DefinePlugin({
 
 最常见的跨域问题
 
-~~~json
+~~~js
 proxy: {
     '/dev': {
         target: EnvConfig.DEV_URL,
@@ -252,7 +252,7 @@ proxy: {
 
 支持scss
 
-~~~json
+~~~js
 {
     test: /\.scss$/,
     use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
@@ -263,7 +263,7 @@ proxy: {
 
 babel-loader+ core-js实现兼容
 
-~~~json
+~~~js
   {
         test: /\.js$/,
         exclude: /node_modules/,
