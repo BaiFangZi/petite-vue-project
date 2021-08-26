@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box" id="box">
+      <div style="text-align: center">双向绑定</div>
+      <div id="count-example" v-scope>
+        <button @click="handleIncrementCount">增加</button>
+        <button @click="handleDecrementCount">减少</button>
+        <input type="number" v-model="num" placeholder="输入数字" />
+        <span> count：{{count}}</span>
+        <span style="margin-left: 20px;">全局状态：{{store.text}}</span>
+      </div>
+      <div style="text-align: center">组件</div>
+      <div id="component-example">
+        <div
+          class="btn-wrapper"
+          v-scope="WButton({type:'primary',label:'普通按钮'})"
+        ></div>
+        <div
+          class="btn-wrapper"
+          v-scope="WButton({type:'success',label:'成功按钮'})"
+        ></div>
+        <div
+          class="btn-wrapper"
+          v-scope="WButton({type:'danger',label:'危险按钮'})"
+        ></div>
+      </div>
+      <div style="text-align: center">生命周期</div>
+      <div id="lifecycle-example">
+        <button @click="handleSwitchLifeCycle">{{flag?'销毁':'生成'}}</button>
+        <div v-if="flag" @mounted="handleMount" @unmounted="handleUnmount">
+          组件
+        </div>
+      </div>
+      <div style="text-align: center">全局状态</div>
+      <div id="global-state-example" v-scope>
+        <input v-focus type="text"  v-model="store.text" placeholder="输入一些值试试" />
+      </div>
+    </div>
+    <!-- 按钮组件 -->
+    <template id="w-button">
+      <button class="btn" :class="`btn-${type}`">
+        <span>{{label}}</span>
+      </button>
+    </template>
+  </body>
+</html>

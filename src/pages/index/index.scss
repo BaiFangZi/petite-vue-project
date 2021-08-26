@@ -1,0 +1,72 @@
+.box {
+  width: 800px;
+  height: 500px;
+  background-color: #e8e8ee;
+  margin: 0 auto;
+  #count-example {
+    // margin: 10px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  #component-example {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+    .btn-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .btn {
+        color: #fff;
+        border-radius: 3px;
+        padding: 8px;
+      }
+      .btn-primary {
+        background-color: #409eff;
+
+        border: 1px solid #409eff;
+        &:hover {
+          background-color: #66b1ff;
+        }
+        &:active {
+          background-color: #3a8ee6;
+        }
+      }
+      .btn-danger {
+        background-color: #f56c6c;
+
+        border: 1px solid #f56c6c;
+        &:hover {
+          background-color: #f78989;
+        }
+        &:active {
+          background-color: #dd6161;
+        }
+      }
+      .btn-success {
+        background-color: #67c23a;
+
+        border: 1px solid #67c23a;
+        &:hover {
+          background-color: #85ce61;
+        }
+        &:active {
+          background-color: #5daf34;
+        }
+      }
+    }
+  }
+  #lifecycle-example{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  }
+  #global-state-example{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  }
+}

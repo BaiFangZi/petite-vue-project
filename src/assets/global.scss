@@ -1,0 +1,17 @@
+html,
+body,
+div,ul,li,span,input,button {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+
+li{
+  list-style: none;
+}
+hr{
+  border: 0.5px solid #e8e8e8;
+}
