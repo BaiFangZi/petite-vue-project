@@ -22,7 +22,6 @@ createApp({
   // text:store.text,
   handleIncrementCount() {
     this.count = this.count + this.num
-    store.text = '1111'
   },
   handleDecrementCount() {
     this.count = this.count - this.num
